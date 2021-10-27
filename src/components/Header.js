@@ -1,11 +1,14 @@
 import { Link } from "@reach/router";
+import Navigation from "./Navigation";
 const Header = () => {
 	return (
 		<header>
-			<section>phone email login</section>
+			<section>
+				phone email <Link to="/login">log ind</Link>
+			</section>
 			<section>
 				<Link to="/">din mægler</Link>
-				<nav>navigation here</nav>
+				<Navigation />
 			</section>
 		</header>
 	);
