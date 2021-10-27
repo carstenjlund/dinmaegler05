@@ -9,4 +9,4 @@ jobs:
         uses: peter-evans/create-or-update-project-card@v1
         with:
           project-name: primary UI
-          column-name: To Do
+          column-name: To do
