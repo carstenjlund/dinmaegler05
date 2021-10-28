@@ -1,11 +1,32 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { Link } from "@reach/router";
+import { theme } from "./theme";
 
 const Navigation = () => {
+	const verticalCenter = css`
+		display: flex;
+		align-items: center;
+	`;
+	const navLink = css`
+		color: ${theme.colors.para01};
+		text-decoration: none;
+
+		&:not(:first-of-type) {
+			margin-left: 2.5rem;
+		}
+	`;
 	return (
-		<nav>
-			<Link to="/homes">Boliger til salg</Link>
-			<Link to="/agents">Mæglere</Link>
-			<Link to="/contact">Kontakt os</Link>
+		<nav css={verticalCenter}>
+			<Link to="/homes" css={navLink}>
+				Boliger til salg
+			</Link>
+			<Link to="/agents" css={navLink}>
+				Mæglere
+			</Link>
+			<Link to="/contact" css={navLink}>
+				Kontakt os
+			</Link>
 		</nav>
 	);
 };
