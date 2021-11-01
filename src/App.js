@@ -10,10 +10,12 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import GlobalStyles from "./components/GlobalStyles";
 
 function App() {
 	return (
 		<>
+			<GlobalStyles />
 			<Header />
 			<Router>
 				<Home path="/" />
