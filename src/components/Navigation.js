@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { Link } from "@reach/router";
 import { theme } from "./theme";
 
-const Navigation = () => {
+const Navigation = ({ token }) => {
 	const verticalCenter = css`
 		display: flex;
 		align-items: center;
@@ -24,6 +24,11 @@ const Navigation = () => {
 			<Link to="/agents" css={navLink}>
 				Mæglere
 			</Link>
+			{token && (
+				<Link to="/favorites" css={navLink}>
+					Mine favoritter
+				</Link>
+			)}
 			<Link to="/contact" css={navLink}>
 				Kontakt os
 			</Link>

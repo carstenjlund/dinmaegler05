@@ -11,10 +11,11 @@ import Register from "./views/Register";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GlobalStyles from "./components/GlobalStyles";
+import UserContextProvider from "./contexts/UserContext";
 
 function App() {
 	return (
-		<>
+		<UserContextProvider>
 			<GlobalStyles />
 			<Header />
 			<Router>
@@ -29,7 +30,7 @@ function App() {
 				<Register path="register" />
 			</Router>
 			<Footer />
-		</>
+		</UserContextProvider>
 	);
 }
 
