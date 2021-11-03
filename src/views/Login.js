@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Helmet } from "react-helmet";
 import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
 
@@ -12,6 +13,9 @@ const Login = () => {
 	return !token ? (
 		<>
 			<div className="wide centered">
+				<Helmet>
+					<title>Log ind - Din Mægler</title>
+				</Helmet>
 				<h1>This is the login view</h1>
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="username">Username</label>
