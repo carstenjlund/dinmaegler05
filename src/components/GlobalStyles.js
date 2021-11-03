@@ -36,17 +36,23 @@ const GlobalStyles = () => {
 				.txt-s {
 					font-size: 0.875rem;
 				}
+				.txt {
+					font-size: calc(0.75rem + 0.25vw);
+				}
 				.txt-l {
 					font-size: 1.125rem;
 				}
 				.txt-xl {
-					font-size: 1.25rem;
+					font-size: calc(1rem + 0.25vw);
 				}
 				.txt-xxl {
 					font-size: 1.5rem;
 				}
 				.heading-xl {
 					font-size: calc(1rem + 2vw);
+				}
+				.heading-l {
+					font-size: calc(0.5rem + 1vw);
 				}
 				.heading-bottombar {
 					position: relative;
