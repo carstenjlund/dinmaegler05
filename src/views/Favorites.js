@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "@reach/router";
 import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
@@ -7,6 +8,9 @@ const Favorites = () => {
 	const { token } = useContext(UserContext);
 	return token ? (
 		<div className="widest centered">
+			<Helmet>
+				<title>Favoritter - Din Mægler</title>
+			</Helmet>
 			<h1>This is the favorites view</h1>
 			<p>
 				Du har ingen favorit boliger lige nu! Du kan se udbuddet af boliger til
