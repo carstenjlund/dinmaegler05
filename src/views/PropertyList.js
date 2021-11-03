@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import PropertyCard from "../components/PropertyCard";
+import LayoutSection from "../components/LayoutSection";
 import TwoColumns from "../components/TwoColumns";
 
 const PropertyList = () => {
@@ -15,19 +16,22 @@ const PropertyList = () => {
 		});
 	}, []);
 	return loading ? (
-		<h3 className="widest centered">loading...</h3>
+		<LayoutSection>
+			<h3 className="widest centered">loading...</h3>
+		</LayoutSection>
 	) : (
-		<div className="widest centered">
-			<Helmet>
-				<title>Boliger til salg - Din Mægler</title>
-			</Helmet>
-			<h1>This is property list the view</h1>
-			<TwoColumns>
-				{properties.map((property) => (
-					<PropertyCard data={property} />
-				))}
-			</TwoColumns>
-		</div>
+		<LayoutSection>
+			<div className="widest centered">
+				<Helmet>
+					<title>Boliger til salg - Din Mægler</title>
+				</Helmet>
+				<TwoColumns>
+					{properties.map((property) => (
+						<PropertyCard data={property} />
+					))}
+				</TwoColumns>
+			</div>
+		</LayoutSection>
 	);
 };
 
