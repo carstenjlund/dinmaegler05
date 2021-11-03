@@ -5,18 +5,18 @@ import { Link } from "@reach/router";
 
 const PropertyCard = ({ data }) => {
 	const style = css`
-		border: 1px solid black;
 		border-radius: 0.25rem;
 		display: grid;
-		grid-template-rows:
-			minmax(15rem, 20vw)
-		}
+		grid-template-rows: minmax(15rem, 20vw);
+		box-shadow: 0 0.5rem 0.75rem 0.125rem #0073e118;
+		background-color: white;
+
 		& .propertyCard__body {
 			padding: 1rem 2rem;
 		}
 		& .propertyCard__footer {
-            display: flex;
-            justify-content: space-between;
+			display: flex;
+			justify-content: space-between;
 			margin-top: 2rem;
 			padding-top: 1rem;
 			border-top: 2px solid lightgray;
@@ -26,9 +26,9 @@ const PropertyCard = ({ data }) => {
 			height: 100%;
 			object-fit: cover;
 		}
-        & .pull-right {
-            margin-left: auto;
-        }
+		& .pull-right {
+			margin-left: auto;
+		}
 	`;
 	return (
 		<Link
