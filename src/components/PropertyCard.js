@@ -38,7 +38,7 @@ const PropertyCard = ({ data }) => {
 			<article css={style}>
 				<img className="propertyCard__img" src={data.images[0].url} alt="" />
 				<div className="propertyCard__body">
-					<h2 className="heading-l">
+					<h2 className="heading">
 						{data.adress1}
 						{data.adress2 && ` ${String.fromCharCode(8226)} ${data.adress2}`}
 					</h2>

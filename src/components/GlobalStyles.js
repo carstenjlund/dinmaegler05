@@ -22,12 +22,26 @@ const GlobalStyles = () => {
 				.wide {
 					max-width: 58rem;
 				}
+				.narrow {
+					max-width: 40rem;
+				}
 				.centered {
-					margin: 0 auto;
+					margin-left: auto;
+					margin-right: auto;
 				}
 				.flex-between {
 					display: flex;
 					justify-content: space-between;
+				}
+
+				.space-top-0 {
+					margin-top: 0;
+				}
+				.space-bottom-0 {
+					margin-bottom: 0;
+				}
+				.space-bottom-xl {
+					margin-bottom: calc(2.5rem + 0.25vw);
 				}
 
 				.txt-xs {
@@ -40,19 +54,29 @@ const GlobalStyles = () => {
 					font-size: calc(0.75rem + 0.25vw);
 				}
 				.txt-l {
-					font-size: 1.125rem;
+					line-height: 1.5;
+					font-size: calc(0.875rem + 0.25vw);
 				}
 				.txt-xl {
+					line-height: 1.8;
 					font-size: calc(1rem + 0.25vw);
+					margin-top: calc(1rem + 0.25vw);
+					margin-bottom: calc(1rem + 0.25vw);
 				}
 				.txt-xxl {
 					font-size: 1.5rem;
+				}
+				.txt-centered {
+					text-align: center;
 				}
 				.heading-xl {
 					font-size: calc(1rem + 2vw);
 				}
 				.heading-l {
-					font-size: calc(0.5rem + 1vw);
+					font-size: calc(0.75rem + 1.5vw);
+				}
+				.heading {
+					font-size: calc(0.875rem + 0.375vw);
 				}
 				.heading-bottombar {
 					position: relative;
