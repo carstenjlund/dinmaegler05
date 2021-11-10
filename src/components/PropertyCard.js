@@ -2,14 +2,20 @@
 import { css } from "@emotion/react";
 import EnergyLabel from "./EnergyLabel";
 import { Link } from "@reach/router";
+import Favorite from "./Favorite";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 
 const PropertyCard = ({ data }) => {
+	const { token, favIds, handleFavorites } = useContext(UserContext);
+
 	const style = css`
 		border-radius: 0.25rem;
 		display: grid;
 		grid-template-rows: minmax(15rem, 20vw);
 		box-shadow: 0 0.5rem 0.75rem 0.125rem #0073e118;
 		background-color: white;
+		position: relative;
 
 		& .propertyCard__body {
 			padding: 1rem 2rem;
@@ -58,6 +64,13 @@ const PropertyCard = ({ data }) => {
 						</h3>
 					</div>
 				</div>
+				{token && (
+					<Favorite
+						isFav={favIds.includes(data.id)}
+						homeId={data.id}
+						handleFavorites={handleFavorites}
+					/>
+				)}
 			</article>
 		</Link>
 	);
