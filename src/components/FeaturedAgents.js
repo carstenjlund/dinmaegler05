@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import LayoutSection from "./LayoutSection";
@@ -27,7 +25,7 @@ const FeaturedAgents = () => {
 					Kontakt en af vores medarbejdere.
 				</p>
 				<ThreeColumns>
-					{featured && featured.map((agent) => <AgentCard data={agent} />)}
+					{featured && featured.map((agent) => <AgentCard data={agent} key={agent.id} />)}
 				</ThreeColumns>
 			</div>
 		</LayoutSection>

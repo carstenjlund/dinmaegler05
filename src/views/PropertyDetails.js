@@ -8,7 +8,7 @@ import { IoImageOutline } from "react-icons/io5";
 import { IoLayersOutline } from "react-icons/io5";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
-import { IoHeart } from "react-icons/io5";
+//import { IoHeart } from "react-icons/io5";
 
 const PropertyDetails = ({ id }) => {
 	const [property, setProperty] = useState();
@@ -19,7 +19,7 @@ const PropertyDetails = ({ id }) => {
 			setProperty(response.data);
 			setLoading(false);
 		});
-	}, []);
+	}, [id]);
 
 	const styleImgContainer = css`
 		height: calc(5rem + 30vw);
@@ -44,7 +44,7 @@ const PropertyDetails = ({ id }) => {
 				<title>Specifik bolig - Din Mægler</title>
 			</Helmet>
 			<div css={styleImgContainer}>
-				<img src={property.images[0].url} />
+				<img src={property.images[0].url} alt={property.adress1}/>
 			</div>
 			<div className="widest centered" css={styleGridContainer}>
 				<div>

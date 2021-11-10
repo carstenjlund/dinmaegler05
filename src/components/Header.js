@@ -42,7 +42,7 @@ const Header = () => {
 			<section css={lightband}>
 				<div className="widest centered flex-between">
 					<Link to="/">
-						<img src="din_maegler_logo.png" alt="" />
+						<img src="/din_maegler_logo.png" alt="" />
 					</Link>
 					<Navigation token={token} />
 				</div>
