@@ -32,6 +32,7 @@ const GlobalStyles = () => {
 				.flex-between {
 					display: flex;
 					justify-content: space-between;
+					align-items: center;
 				}
 
 				.space-top-0 {
@@ -103,7 +104,7 @@ const GlobalStyles = () => {
 					font-family: "Roboto", sans-serif;
 					font-size: 1rem;
 				}
-				button[type="submit"] {
+				.button, button[type="submit"] {
 					padding: 0.5rem 2rem;
 					border-radius: 0.175rem;
 					border: 1px solid ${theme.colors.primary};
