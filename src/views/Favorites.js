@@ -4,9 +4,11 @@ import { Link } from "@reach/router";
 import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
 import HeadlineRibbon from "../components/HeadlineRibbon";
+import FavoriteCard from "../components/FavoriteCard";
 
 const Favorites = () => {
 	const { token, favorites } = useContext(UserContext);
+
 
 	console.log("favoritespage", favorites);
 	return token ? (
@@ -19,7 +21,7 @@ const Favorites = () => {
 			<h1>This is the favorites view</h1>
 
 			{favorites.length ? (
-				favorites.map((favorite) => <p>{favorite.id}</p>)
+				favorites.map((favorite) => <FavoriteCard data={favorite} />)
 			) : (
 				<p>
 					Du har ingen favorit boliger lige nu! Du kan se udbuddet af boliger
