@@ -4,6 +4,7 @@ import axios from "axios";
 import AgentCard from "../components/AgentCard";
 import ThreeColumns from "../components/ThreeColumns";
 import LayoutSection from "../components/LayoutSection";
+import HeadlineRibbon from "../components/HeadlineRibbon";
 const AgentList = () => {
 	const [agents, setAgents] = useState();
 	const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ const AgentList = () => {
 			<Helmet>
 				<title>Medarbejdere - Din Mægler</title>
 			</Helmet>
+			<HeadlineRibbon headline="Medarbejdere i Roskilde" />
 			<LayoutSection>
 				<section className="widest centered">
 					<ThreeColumns>
