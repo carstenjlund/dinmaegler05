@@ -10,7 +10,6 @@ const UserContextProvider = ({ children }) => {
 	const [favorites, setFavorites] = useState([]);
 	const [favIds, setFavIds] = useState([]);
 
-	favIds && console.log(favIds);
 
 	const handleLogin = (username, password) => {
 		if (username && password) {
@@ -38,7 +37,6 @@ const UserContextProvider = ({ children }) => {
 		setFavIds(ids);
 	}, [favorites]);
 
-	favIds && console.log(favIds);
 
 	const handleFavorites = (newFavId) => {
 		let newArray = favIds;
@@ -47,7 +45,6 @@ const UserContextProvider = ({ children }) => {
 		} else {
 			newArray.push(newFavId);
 		}
-		console.log(newArray);
 		//opdater sessionstorage...
 		axios
 			.put(

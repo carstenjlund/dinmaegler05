@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import LayoutSection from "./LayoutSection";
@@ -28,7 +26,7 @@ const FeaturedHomes = () => {
 				</p>
 				<TwoColumns>
 					{featured &&
-						featured.map((property) => <PropertyCard data={property} />)}
+						featured.map((property) => <PropertyCard data={property} key={property.id} />)}
 				</TwoColumns>
 			</div>
 		</LayoutSection>

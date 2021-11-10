@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 
 const FavoriteCard = ({ data }) => {
-	const { token, favIds, handleFavorites } = useContext(UserContext);
+	const { handleFavorites } = useContext(UserContext);
 
 	const style = css`
 		border-radius: 0.25rem;

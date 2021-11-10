@@ -39,7 +39,7 @@ const Footer = () => {
 		<footer>
 			<section css={top}>
 				<div className="widest centered">
-					<img src="din_maegler_logo.png" alt="" />
+					<img src="/din_maegler_logo.png" alt="" />
 					<p>
 						There are many variations of passages of Lorem Ipsum available, but
 						the majority have <br />
@@ -54,20 +54,20 @@ const Footer = () => {
 				>
 					<div css={light}>
 						<FooterIconGroup
-							icon={<IoMdCall color={`${theme.colors.light}`} size="2rem" />}
+							icon={<IoMdCall color={`${theme.colors.light}`} size="2em" />}
 							smallText="Ring til os"
 							bigText="+45 7070 4000"
 						/>
 						<FooterIconGroup
 							icon={
-								<IoPaperPlane color={`${theme.colors.light}`} size="2rem" />
+								<IoPaperPlane color={`${theme.colors.light}`} size="2em" />
 							}
 							smallText="Send en mail"
 							bigText="4000@dinmaegler.com"
 						/>
 						<FooterIconGroup
 							icon={
-								<FaMapMarkerAlt color={`${theme.colors.light}`} size="2rem" />
+								<FaMapMarkerAlt color={`${theme.colors.light}`} size="2em" />
 							}
 							smallText="Butik"
 							bigText="Stændertorvet 78, 4000 Roskilde"
@@ -90,7 +90,7 @@ const Footer = () => {
 			</section>
 			<section css={middle}>
 				<div className="widest centered" css={grid}>
-					<img src="dms_logo.png" alt="" style={{ gridColumnStart: 2 }} />
+					<img src="/dms_logo.png" alt="" style={{ gridColumnStart: 2 }} />
 				</div>
 			</section>
 			<section css={bottom}>

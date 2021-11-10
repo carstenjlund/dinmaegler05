@@ -49,7 +49,7 @@ const PropertyList = () => {
 			<div className="widest centered">
 				<TwoColumns>
 					{properties.map((property) => (
-						<PropertyCard data={property} />
+						<PropertyCard data={property} key={property.id} />
 					))}
 				</TwoColumns>
 			</div>
