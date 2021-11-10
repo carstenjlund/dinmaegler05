@@ -93,6 +93,33 @@ const GlobalStyles = () => {
 					}
 				}
 
+				.agent-title-bottombar {
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 200%;
+						left: 0;
+						height: 0.125rem;
+						width: 3.75rem;
+						background-color: ${theme.colors.para02};
+					}
+				}
+				.agent-about-bottombar {
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 160%;
+						left: 0;
+						height: 0.25rem;
+						width: 3.75rem;
+						background-color: ${theme.colors.primary};
+					}
+				}
+
 				label {
 					display: block;
 					margin-bottom: 0.25rem;
