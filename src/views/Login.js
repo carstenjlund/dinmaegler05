@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
+import HeadlineRibbon from "../components/HeadlineRibbon";
 
 const Login = () => {
 	const { handleLogin, token } = useContext(UserContext);
@@ -12,10 +13,11 @@ const Login = () => {
 	};
 	return !token ? (
 		<>
-			<div className="wide centered">
 				<Helmet>
 					<title>Log ind - Din Mægler</title>
 				</Helmet>
+				<HeadlineRibbon headline="Log ind" />
+			<div className="wide centered">
 				<h1>This is the login view</h1>
 				<form onSubmit={handleSubmit}>
 					<label htmlFor="username">Username</label>

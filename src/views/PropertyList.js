@@ -5,6 +5,7 @@ import axios from "axios";
 import PropertyCard from "../components/PropertyCard";
 import LayoutSection from "../components/LayoutSection";
 import TwoColumns from "../components/TwoColumns";
+import HeadlineRibbon from "../components/HeadlineRibbon";
 
 const PropertyList = () => {
 	const [properties, setProperties] = useState();
@@ -39,11 +40,13 @@ const PropertyList = () => {
 			<h3 className="widest centered">loading...</h3>
 		</LayoutSection>
 	) : (
+		<>
+			<Helmet>
+				<title>Boliger til salg - Din Mægler</title>
+			</Helmet>
+			<HeadlineRibbon headline="Boliger til salg" />
 		<LayoutSection>
 			<div className="widest centered">
-				<Helmet>
-					<title>Boliger til salg - Din Mægler</title>
-				</Helmet>
 				<TwoColumns>
 					{properties.map((property) => (
 						<PropertyCard data={property} />
@@ -51,6 +54,7 @@ const PropertyList = () => {
 				</TwoColumns>
 			</div>
 		</LayoutSection>
+		</>
 	);
 };
 

@@ -3,16 +3,19 @@ import { Helmet } from "react-helmet";
 import { Link } from "@reach/router";
 import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
+import HeadlineRibbon from "../components/HeadlineRibbon";
 
 const Favorites = () => {
 	const { token, favorites } = useContext(UserContext);
 
 	console.log("favoritespage", favorites);
 	return token ? (
-		<div className="widest centered">
+		<>
 			<Helmet>
 				<title>Favoritter - Din Mægler</title>
 			</Helmet>
+			<HeadlineRibbon headline="Mine favoritboliger" />
+		<div className="widest centered">
 			<h1>This is the favorites view</h1>
 
 			{favorites.length ? (
@@ -24,6 +27,7 @@ const Favorites = () => {
 				</p>
 			)}
 		</div>
+		</>
 	) : (
 		<Redirect to="/login" noThrow />
 	);
