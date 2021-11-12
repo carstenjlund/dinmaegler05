@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "@reach/router";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import PropertyCard from "../components/PropertyCard";
 import LayoutSection from "../components/LayoutSection";

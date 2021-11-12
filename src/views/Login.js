@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
 import HeadlineRibbon from "../components/HeadlineRibbon";

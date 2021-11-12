@@ -12,9 +12,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GlobalStyles from "./components/GlobalStyles";
 import UserContextProvider from "./contexts/UserContext";
+import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
 	return (
+		<HelmetProvider>
 		<UserContextProvider>
 			<GlobalStyles />
 			<Header />
@@ -31,6 +33,7 @@ function App() {
 			</Router>
 			<Footer />
 		</UserContextProvider>
+		</HelmetProvider>
 	);
 }
 

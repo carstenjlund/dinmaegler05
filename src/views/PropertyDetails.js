@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { IoImageOutline } from "react-icons/io5";

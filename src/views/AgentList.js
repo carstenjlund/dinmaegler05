@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AgentCard from "../components/AgentCard";
