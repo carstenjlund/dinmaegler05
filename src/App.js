@@ -1,4 +1,4 @@
-import { Router } from "@reach/router";
+import { Router } from "react-router-dom";
 import Home from "./views/Home";
 import Favorites from "./views/Favorites";
 import AgentList from "./views/AgentList";
@@ -11,13 +11,13 @@ import Register from "./views/Register";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GlobalStyles from "./components/GlobalStyles";
-import UserContextProvider from "./contexts/UserContext";
+import AuthProvider from "./contexts/AuthContext";
 import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
 	return (
 		<HelmetProvider>
-		<UserContextProvider>
+		<AuthProvider>
 			<GlobalStyles />
 			<Header />
 			<Router>
@@ -32,7 +32,7 @@ function App() {
 				<Register path="register" />
 			</Router>
 			<Footer />
-		</UserContextProvider>
+		</AuthProvider>
 		</HelmetProvider>
 	);
 }
