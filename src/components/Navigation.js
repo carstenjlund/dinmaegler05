@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import { theme } from "./theme";
 
 const Navigation = ({ token }) => {
