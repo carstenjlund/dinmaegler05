@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { IoImageOutline } from "react-icons/io5";
 import { IoLayersOutline } from "react-icons/io5";
@@ -10,7 +11,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 //import { IoHeart } from "react-icons/io5";
 
-const PropertyDetails = ({ id }) => {
+const PropertyDetails = () => {
+	const { id } = useParams();
 	const [property, setProperty] = useState();
 	const [loading, setLoading] = useState(true);
 

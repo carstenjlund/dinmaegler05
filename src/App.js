@@ -1,4 +1,5 @@
-import { Router } from "react-router-dom";
+import { Router } from "@reach/router";
+import { Routes, Route } from "react-router-dom"
 import Home from "./views/Home";
 import Favorites from "./views/Favorites";
 import AgentList from "./views/AgentList";
@@ -20,17 +21,17 @@ function App() {
 		<AuthProvider>
 			<GlobalStyles />
 			<Header />
-			<Router>
-				<Home path="/" />
-				<PropertyList path="homes" />
-				<PropertyDetails path="homes/:id" />
-				<AgentList path="agents" />
-				<AgentDetails path="agents/:id" />
-				<Favorites path="favorites" />
-				<Contact path="contact" />
-				<Login path="login" />
-				<Register path="register" />
-			</Router>
+			<Routes>
+				<Route path="/" element={ <Home /> } />
+				<Route path="homes" element={<PropertyList />} />
+				<Route path="homes/:id"  element={<PropertyDetails />} />
+				<Route path="agents"  element={<AgentList />} />
+				<Route path="agents/:id"  element={<AgentDetails />} />
+				<Route path="favorites"  element={<Favorites />} />
+				<Route path="contact"  element={<Contact />} />
+				<Route path="login" element={<Login />} />
+				<Route path="register" element={<Register />} />
+			</Routes>
 			<Footer />
 		</AuthProvider>
 		</HelmetProvider>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "@reach/router";
+import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import PropertyCard from "../components/PropertyCard";
@@ -8,9 +8,11 @@ import TwoColumns from "../components/TwoColumns";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 
 const PropertyList = () => {
+	const params = useParams()
+	console.log(params)
 	const [properties, setProperties] = useState();
 	const [loading, setLoading] = useState(true);
-	const search = useLocation().search;
+	const search = useParams().search;
 	const searchTerm = new URLSearchParams(search).get("search");
 
 	useEffect(() => {

@@ -3,13 +3,16 @@ import { css } from "@emotion/react"
 
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import { Helmet } from "react-helmet-async";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 import LayoutSection from "../components/LayoutSection";
 import AgentDetailsCard from "../components/AgentDetailsCard";
 
-const AgentDetails = ({id}) => {
+const AgentDetails = () => {
 
+
+	const { id } = useParams();
 	const [agent, setAgent] = useState();
 	const [loading, setLoading] = useState(true);
 
