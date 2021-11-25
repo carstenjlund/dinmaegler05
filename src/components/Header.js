@@ -1,13 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 import { theme } from "./theme";
-import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import useAuth from "../customHooks/useAuth"
 
 const Header = () => {
-	const { token, handleLogout } = useContext(UserContext);
+	const auth = useAuth()
 	const darkband = css`
 		background-color: ${theme.colors.primary};
 		color: ${theme.colors.light};
@@ -22,7 +21,7 @@ const Header = () => {
 			<section css={darkband}>
 				<div className="widest centered flex-between">
 					<div className="left-group">phone email</div>
-					{!token ? (
+					{!auth.token ? (
 						<Link
 							to="/login"
 							style={{ color: "white", textDecoration: "none" }}
@@ -32,7 +31,7 @@ const Header = () => {
 					) : (
 						<p
 							style={{ margin: 0, cursor: "pointer" }}
-							onClick={() => handleLogout()}
+							onClick={() => auth.handleLogout()}
 						>
 							log ud
 						</p>
@@ -44,7 +43,7 @@ const Header = () => {
 					<Link to="/">
 						<img src="/din_maegler_logo.png" alt="" />
 					</Link>
-					<Navigation token={token} />
+					<Navigation token={auth.token} />
 				</div>
 			</section>
 		</header>

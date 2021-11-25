@@ -2,9 +2,9 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { navigate } from "@reach/router";
 
-export const UserContext = createContext();
+export const AuthContext = createContext();
 
-const UserContextProvider = ({ children }) => {
+const AuthProvider = ({ children }) => {
 	const [token, setToken] = useState(null);
 	const [userId, setUserId] = useState(null);
 	const [favorites, setFavorites] = useState([]);
@@ -62,7 +62,7 @@ const UserContextProvider = ({ children }) => {
 	};
 
 	return (
-		<UserContext.Provider
+		<AuthContext.Provider
 			value={{
 				token,
 				userId,
@@ -74,8 +74,8 @@ const UserContextProvider = ({ children }) => {
 			}}
 		>
 			{children}
-		</UserContext.Provider>
+		</AuthContext.Provider>
 	);
 };
 
-export default UserContextProvider;
+export default AuthProvider;

@@ -3,11 +3,10 @@ import { css } from "@emotion/react";
 import EnergyLabel from "./EnergyLabel";
 import { Link } from "@reach/router";
 import Favorite from "./Favorite";
-import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import useAuth from "../customHooks/useAuth"
 
 const PropertyCard = ({ data }) => {
-	const { token, favIds, handleFavorites } = useContext(UserContext);
+	const auth = useAuth()
 
 	const style = css`
 		border-radius: 0.25rem;
@@ -64,11 +63,11 @@ const PropertyCard = ({ data }) => {
 						</h3>
 					</div>
 				</div>
-				{token && (
+				{auth.token && (
 					<Favorite
-						isFav={favIds.includes(data.id)}
+						isFav={auth.favIds.includes(data.id)}
 						homeId={data.id}
-						handleFavorites={handleFavorites}
+						handleFavorites={auth.handleFavorites}
 					/>
 				)}
 			</article>

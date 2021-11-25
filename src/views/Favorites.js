@@ -1,17 +1,15 @@
-import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "@reach/router";
-import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 import FavoriteCard from "../components/FavoriteCard";
+import useAuth from "../customHooks/useAuth"
 
 const Favorites = () => {
-	const { token, favorites } = useContext(UserContext);
+	const auth = useAuth();
 
-
-	console.log("favoritespage", favorites);
-	return token ? (
+	console.log("favoritespage", auth.favorites);
+	return auth.token ? (
 		<>
 			<Helmet>
 				<title>Favoritter - Din Mægler</title>
@@ -20,8 +18,8 @@ const Favorites = () => {
 		<div className="widest centered">
 			<h1>This is the favorites view</h1>
 
-			{favorites.length ? (
-				favorites.map((favorite) => <FavoriteCard data={favorite} />)
+			{auth.favorites.length ? (
+				auth.favorites.map((favorite) => <FavoriteCard data={favorite} />)
 			) : (
 				<p>
 					Du har ingen favorit boliger lige nu! Du kan se udbuddet af boliger

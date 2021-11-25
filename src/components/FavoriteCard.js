@@ -2,11 +2,10 @@
 import { css } from "@emotion/react";
 import EnergyLabel from "./EnergyLabel";
 import { Link } from "@reach/router";
-import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import useAuth from "../customHooks/useAuth"
 
 const FavoriteCard = ({ data }) => {
-	const { handleFavorites } = useContext(UserContext);
+	const auth = useAuth()
 
 	const style = css`
 		border-radius: 0.25rem;
@@ -37,7 +36,7 @@ const FavoriteCard = ({ data }) => {
 
 const handleClick = (e) => {
     e.preventDefault()
-    handleFavorites(data.id)
+    auth.handleFavorites(data.id)
 }
 	return (
 		<Link

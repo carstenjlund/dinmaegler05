@@ -1,17 +1,16 @@
-import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import { UserContext } from "../contexts/UserContext";
 import { Redirect } from "@reach/router";
 import HeadlineRibbon from "../components/HeadlineRibbon";
+import useAuth from "../customHooks/useAuth"
 
 const Login = () => {
-	const { handleLogin, token } = useContext(UserContext);
+	const auth = useAuth()
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		handleLogin(e.target.username.value, e.target.password.value);
+		auth.handleLogin(e.target.username.value, e.target.password.value);
 	};
-	return !token ? (
+	return !auth.token ? (
 		<>
 				<Helmet>
 					<title>Log ind - Din Mægler</title>
