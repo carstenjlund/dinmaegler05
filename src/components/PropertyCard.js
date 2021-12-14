@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import EnergyLabel from "./EnergyLabel";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import Favorite from "./Favorite";
 import useAuth from "../customHooks/useAuth"
 

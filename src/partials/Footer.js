@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import FooterIconGroup from "./FooterIconGroup";
+import FooterIconGroup from "../components/FooterIconGroup";
 import { IoMdCall } from "react-icons/io";
 import { IoPaperPlane } from "react-icons/io5";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { theme } from "./theme";
+import { theme } from "../components/theme";
 
 const Footer = () => {
 	const top = css`

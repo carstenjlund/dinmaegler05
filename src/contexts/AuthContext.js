@@ -1,12 +1,14 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-import { navigate } from "@reach/router";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+	const navigate = useNavigate()
 	const [token, setToken] = useState(null);
 	const [userId, setUserId] = useState(null);
+	const [username, setUsername] = useState(null);
 	const [favorites, setFavorites] = useState([]);
 	const [favIds, setFavIds] = useState([]);
 
@@ -21,6 +23,7 @@ const AuthProvider = ({ children }) => {
 				.then((response) => {
 					setToken(response.data.jwt);
 					setUserId(response.data.user.id);
+					setUsername(response.data.user.username)
 					setFavorites(response.data.user.homes);
 				});
 		}
@@ -28,6 +31,7 @@ const AuthProvider = ({ children }) => {
 	const handleLogout = () => {
 		setToken(null);
 		setUserId(null);
+		setUsername(null)
 		setFavorites([]);
 		navigate("/");
 	};
@@ -66,6 +70,7 @@ const AuthProvider = ({ children }) => {
 			value={{
 				token,
 				userId,
+				username,
 				favorites,
 				favIds,
 				handleLogin,

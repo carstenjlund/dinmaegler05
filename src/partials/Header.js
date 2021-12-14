@@ -2,21 +2,36 @@
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
-import { theme } from "./theme";
+import { theme } from "../components/theme";
 import useAuth from "../customHooks/useAuth"
+import UserMenu from "../components/UserMenu";
 
 const Header = () => {
 	const auth = useAuth()
+
 	const darkband = css`
 		background-color: ${theme.colors.primary};
 		color: ${theme.colors.light};
 		padding: 0.75rem 0;
 	`;
-	const lightband = css`
+	const lightband = css` 	
 		padding: 0.75rem 0;
 	`;
 
+	const myuserdimmer = css`
+		margin: 0;
+		cursor: pointer;
+		position: relative;
+
+		&:hover > .user-menu {
+			visibility: visible;
+			opacity: 1;
+			transition: opacity 0.4s ease-out, visibility 0s 0s;
+		}
+	`
+
 	return (
+	
 		<header>
 			<section css={darkband}>
 				<div className="widest centered flex-between">
@@ -29,12 +44,11 @@ const Header = () => {
 							log ind
 						</Link>
 					) : (
-						<p
-							style={{ margin: 0, cursor: "pointer" }}
-							onClick={() => auth.handleLogout()}
-						>
-							log ud
-						</p>
+
+						<div css={myuserdimmer}>
+							{auth.username}
+							<UserMenu />
+						</div>
 					)}
 				</div>
 			</section>

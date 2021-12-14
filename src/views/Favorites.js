@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "@reach/router";
-import { Redirect } from "@reach/router";
+import { Link, Navigate } from "react-router-dom";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 import FavoriteCard from "../components/FavoriteCard";
 import useAuth from "../customHooks/useAuth"
@@ -8,7 +7,6 @@ import useAuth from "../customHooks/useAuth"
 const Favorites = () => {
 	const auth = useAuth();
 
-	console.log("favoritespage", auth.favorites);
 	return auth.token ? (
 		<>
 			<Helmet>
@@ -19,7 +17,7 @@ const Favorites = () => {
 			<h1>This is the favorites view</h1>
 
 			{auth.favorites.length ? (
-				auth.favorites.map((favorite) => <FavoriteCard data={favorite} />)
+				auth.favorites.map((favorite) => <FavoriteCard data={favorite} key={favorite.id} />)
 			) : (
 				<p>
 					Du har ingen favorit boliger lige nu! Du kan se udbuddet af boliger
@@ -29,7 +27,7 @@ const Favorites = () => {
 		</div>
 		</>
 	) : (
-		<Redirect to="/login" noThrow />
+		<Navigate to="/login" />
 	);
 };
 

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Redirect } from "@reach/router";
+import { Navigate } from "react-router-dom";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 import useAuth from "../customHooks/useAuth"
 
@@ -28,7 +28,7 @@ const Login = () => {
 			</div>
 		</>
 	) : (
-		<Redirect to="/favorites" noThrow />
+		<Navigate to="/favorites" />
 	);
 };
 
