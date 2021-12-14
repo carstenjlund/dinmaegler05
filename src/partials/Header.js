@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
-import { theme } from "../components/theme";
+import { theme } from "../layout/theme";
 import useAuth from "../customHooks/useAuth"
 import UserMenu from "../components/UserMenu";
 

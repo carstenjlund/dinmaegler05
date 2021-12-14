@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import { theme } from "../components/theme";
+import { theme } from "../layout/theme";
 
 const Navigation = ({ token }) => {
 	const verticalCenter = css`

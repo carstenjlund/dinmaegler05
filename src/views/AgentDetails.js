@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Helmet } from "react-helmet-async";
 import HeadlineRibbon from "../components/HeadlineRibbon";
-import LayoutSection from "../components/LayoutSection";
+import LayoutSection from "../layout/LayoutSection";
 import AgentDetailsCard from "../components/AgentDetailsCard";
 
 const AgentDetails = () => {

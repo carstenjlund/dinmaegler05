@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import LayoutSection from "./LayoutSection";
-import TwoColumns from "./TwoColumns";
+import LayoutSection from "../layout/LayoutSection";
+import TwoColumns from "../layout/TwoColumns";
 import PropertyCard from "./PropertyCard";
-import { theme } from "./theme";
+import { theme } from "../layout/theme";
 
 const FeaturedHomes = () => {
 	const [featured, setFeatured] = useState();

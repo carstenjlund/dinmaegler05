@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import LayoutSection from "./LayoutSection";
-import ThreeColumns from "./ThreeColumns";
+import LayoutSection from "../layout/LayoutSection";
+import ThreeColumns from "../layout/ThreeColumns";
 import AgentCard from "./AgentCard";
-import { theme } from "./theme";
+import { theme } from "../layout/theme";
 
 const FeaturedAgents = () => {
 	const [featured, setFeatured] = useState();

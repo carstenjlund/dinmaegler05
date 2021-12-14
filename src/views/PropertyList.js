@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import PropertyCard from "../components/PropertyCard";
-import LayoutSection from "../components/LayoutSection";
-import TwoColumns from "../components/TwoColumns";
+import LayoutSection from "../layout/LayoutSection";
+import TwoColumns from "../layout/TwoColumns";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 
 const PropertyList = () => {

@@ -10,7 +10,7 @@ import Login from "./views/Login";
 import Register from "./views/Register";
 import Header from "./partials/Header";
 import Footer from "./partials/Footer";
-import GlobalStyles from "./components/GlobalStyles";
+import GlobalStyles from "./layout/GlobalStyles";
 import AuthProvider from "./contexts/AuthContext";
 import { HelmetProvider } from 'react-helmet-async';
 

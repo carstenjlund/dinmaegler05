@@ -4,7 +4,7 @@ import FooterIconGroup from "../components/FooterIconGroup";
 import { IoMdCall } from "react-icons/io";
 import { IoPaperPlane } from "react-icons/io5";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { theme } from "../components/theme";
+import { theme } from "../layout/theme";
 
 const Footer = () => {
 	const top = css`

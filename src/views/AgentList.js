@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AgentCard from "../components/AgentCard";
-import ThreeColumns from "../components/ThreeColumns";
-import LayoutSection from "../components/LayoutSection";
+import ThreeColumns from "../layout/ThreeColumns";
+import LayoutSection from "../layout/LayoutSection";
 import HeadlineRibbon from "../components/HeadlineRibbon";
 const AgentList = () => {
 	const [agents, setAgents] = useState();

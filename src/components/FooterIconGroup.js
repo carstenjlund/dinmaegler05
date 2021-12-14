@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { theme } from "./theme";
+import { theme } from "../layout/theme";
 
 const FooterIconGroup = ({ icon, smallText, bigText }) => {
 	const grid = css`
