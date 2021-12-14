@@ -1,4 +1,3 @@
-import { Router } from "@reach/router";
 import { Routes, Route } from "react-router-dom"
 import Home from "./views/Home";
 import Favorites from "./views/Favorites";
@@ -9,8 +8,8 @@ import PropertyDetails from "./views/PropertyDetails";
 import Contact from "./views/Contact";
 import Login from "./views/Login";
 import Register from "./views/Register";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./partials/Header";
+import Footer from "./partials/Footer";
 import GlobalStyles from "./components/GlobalStyles";
 import AuthProvider from "./contexts/AuthContext";
 import { HelmetProvider } from 'react-helmet-async';
