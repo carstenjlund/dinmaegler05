@@ -14,7 +14,7 @@ const UserContextProvider = ({ children }) => {
 	const handleLogin = (username, password) => {
 		if (username && password) {
 			axios
-				.post("https://dinmaegler.herokuapp.com/auth/local", {
+				.post("https://dinmaegler.onrender.com/auth/local", {
 					identifier: username,
 					password: password,
 				})
@@ -48,7 +48,7 @@ const UserContextProvider = ({ children }) => {
 		//opdater sessionstorage...
 		axios
 			.put(
-				"https://dinmaegler.herokuapp.com/users/" + userId,
+				"https://dinmaegler.onrender.com/users/" + userId,
 				{
 					homes: newArray,
 				},
