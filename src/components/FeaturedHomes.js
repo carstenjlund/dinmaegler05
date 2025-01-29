@@ -9,7 +9,7 @@ const FeaturedHomes = () => {
 	const [featured, setFeatured] = useState();
 
 	useEffect(() => {
-		axios("https://dinmaegler.herokuapp.com/homes?_limit=4").then((response) =>
+		axios("https://dinmaegler.onrender.com/homes?_limit=4").then((response) =>
 			setFeatured(response.data)
 		);
 	}, []);
