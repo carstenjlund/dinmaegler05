@@ -10,7 +10,7 @@ const AgentList = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		axios("https://dinmaegler.herokuapp.com/agents").then((response) => {
+		axios("https://dinmaegler.onrender.com/agents").then((response) => {
 			setAgents(response.data);
 			setLoading(false);
 		});
