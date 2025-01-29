@@ -9,7 +9,7 @@ const FeaturedAgents = () => {
 	const [featured, setFeatured] = useState();
 
 	useEffect(() => {
-		axios("https://dinmaegler.herokuapp.com/agents?_limit=3").then((response) =>
+		axios("https://dinmaegler.onrender.com/agents?_limit=3").then((response) =>
 			setFeatured(response.data)
 		);
 	}, []);
