@@ -14,7 +14,7 @@ const AgentDetails = ({id}) => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		axios("https://dinmaegler.herokuapp.com/agents/" + id )
+		axios("https://dinmaegler.onrender.com/agents/" + id )
 			.then(response => {setAgent(response.data)
 			setLoading(false)
 			})
