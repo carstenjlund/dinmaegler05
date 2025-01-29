@@ -14,7 +14,7 @@ const PropertyList = () => {
 	const searchTerm = new URLSearchParams(search).get("search");
 
 	useEffect(() => {
-		axios("https://dinmaegler.herokuapp.com/homes").then((response) => {
+		axios("https://dinmaegler.onrender.com/homes").then((response) => {
 			if (searchTerm) {
 				let foundProperties = response.data.filter((property) => {
 					return (
