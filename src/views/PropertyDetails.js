@@ -15,7 +15,7 @@ const PropertyDetails = ({ id }) => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		axios(`https://dinmaegler.herokuapp.com/homes/${id}`).then((response) => {
+		axios(`https://dinmaegler.onrender.com/homes/${id}`).then((response) => {
 			setProperty(response.data);
 			setLoading(false);
 		});
